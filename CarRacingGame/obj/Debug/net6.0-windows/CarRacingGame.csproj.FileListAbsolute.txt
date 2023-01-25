@@ -16,3 +16,4 @@ C:\Users\alita\Desktop\Projects\Practice\C#\Projects\CarRacingGame\CarRacingGame
 C:\Users\alita\Desktop\Projects\Practice\C#\Projects\CarRacingGame\CarRacingGame\obj\Debug\net6.0-windows\CarRacingGame.pdb
 C:\Users\alita\Desktop\Projects\Practice\C#\Projects\CarRacingGame\CarRacingGame\obj\Debug\net6.0-windows\CarRacingGame.genruntimeconfig.cache
 C:\Users\alita\Desktop\Projects\Practice\C#\Projects\CarRacingGame\CarRacingGame\obj\Debug\net6.0-windows\ref\CarRacingGame.dll
+C:\Users\alita\Desktop\Projects\Practice\C#\Projects\CarRacingGame\CarRacingGame\bin\Debug\net6.0-windows\CarRacingGame.dll.config

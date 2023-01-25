@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_highScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.crash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCar)).BeginInit();
@@ -73,7 +75,7 @@
             // 
             // myCar
             // 
-            this.myCar.Image = global::CarRacingGame.Properties.Resources.araba8;
+            this.myCar.Image = global::CarRacingGame.Properties.Resources.araba2;
             this.myCar.Location = new System.Drawing.Point(227, 359);
             this.myCar.Name = "myCar";
             this.myCar.Size = new System.Drawing.Size(69, 134);
@@ -83,7 +85,7 @@
             // 
             // car2
             // 
-            this.car2.Image = global::CarRacingGame.Properties.Resources.araba9;
+            this.car2.Image = global::CarRacingGame.Properties.Resources.araba3;
             this.car2.Location = new System.Drawing.Point(338, 56);
             this.car2.Name = "car2";
             this.car2.Size = new System.Drawing.Size(69, 134);
@@ -93,7 +95,7 @@
             // 
             // car1
             // 
-            this.car1.Image = global::CarRacingGame.Properties.Resources.araba5;
+            this.car1.Image = global::CarRacingGame.Properties.Resources.araba4;
             this.car1.Location = new System.Drawing.Point(73, 56);
             this.car1.Name = "car1";
             this.car1.Size = new System.Drawing.Size(69, 134);
@@ -121,12 +123,13 @@
             this.btnStartGame.TabIndex = 1;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = false;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(192, 541);
+            this.label1.Location = new System.Drawing.Point(350, 541);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 33);
             this.label1.TabIndex = 2;
@@ -136,7 +139,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblScore.Location = new System.Drawing.Point(302, 541);
+            this.lblScore.Location = new System.Drawing.Point(460, 541);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(31, 33);
             this.lblScore.TabIndex = 2;
@@ -144,15 +147,37 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 5;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 541);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 33);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "High Score:";
+            // 
+            // lbl_highScore
+            // 
+            this.lbl_highScore.AutoSize = true;
+            this.lbl_highScore.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_highScore.Location = new System.Drawing.Point(192, 541);
+            this.lbl_highScore.Name = "lbl_highScore";
+            this.lbl_highScore.Size = new System.Drawing.Size(31, 33);
+            this.lbl_highScore.TabIndex = 2;
+            this.lbl_highScore.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(536, 668);
+            this.Controls.Add(this.lbl_highScore);
             this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.panel1);
@@ -161,6 +186,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Car Racing";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.crash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myCar)).EndInit();
@@ -184,5 +211,7 @@
         private Label lblScore;
         private PictureBox crash;
         private System.Windows.Forms.Timer timer1;
+        private Label label2;
+        private Label lbl_highScore;
     }
 }
